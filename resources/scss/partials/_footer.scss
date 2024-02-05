@@ -1,0 +1,75 @@
+div.big-container-footer {
+    background-image: url(../assets/img/footer-bg.jpg);
+    width: 100%;
+
+}
+
+section.footer-top {
+    @include container(width, margin);
+
+
+    color: $footer-text-color;
+    @include flex (row, center, center);
+    overflow: hidden;
+
+
+    div.container-list {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 65%;
+
+
+        ul {
+            h1 {
+                text-transform: uppercase;
+                padding: 1.5rem 0;
+            }
+
+            li {
+                color: $footer-text-list-color;
+                list-style-type: none;
+                font-size: .7rem;
+                margin-bottom: .34rem;
+            }
+        }
+
+    }
+}
+
+section.footer-bottom {
+    background-color: $footer-bt-bg-color;
+    height: 110px;
+    @include flex(row, space-between, center);
+
+    div.container-footer-bottom {
+        @include container(width, margin);
+        @include flex(row, space-between, center);
+
+        button {
+            background-color: $footer-bt-bg-color;
+            color: $footer-text-color;
+            border: 2px solid $footer-border-color;
+            padding: .5rem .7rem;
+            text-transform: uppercase;
+        }
+
+        div.container-icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            p.follow {
+                margin-right: 10px;
+                color: $footer-bottom-text;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            img {
+                margin-right: .8rem;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,64 @@
+// article {
+//     width: 150px;
+//     height: 150px;
+// }
+
+img.card-pictures {
+    width: 100%;
+    height: 100%;
+
+}
+
+section.container-card {
+    @include flex (row, center, center);
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.hero-card {
+    width: calc((100% / 6) - 2rem);
+    margin: 1rem;
+}
+
+
+h1 {
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+
+main.main-container {
+    background-color: $main-bd-color;
+    width: 100%;
+    color: $main-text-color;
+
+
+
+}
+
+section.container-jumbotron {
+    height: 100%;
+    height: 400px;
+    @include flex(row, start, center);
+    background-image: url(../assets/img/jumbotron.jpg);
+    position: relative;
+
+}
+
+div.current-text {
+    @include container(width, margin);
+
+    p.current {
+        background-color: $main-bg-current;
+        padding: .5rem;
+        position: absolute;
+        bottom: 0;
+        transform: translate(0%, 50%);
+    }
+
+}
+
+section.container-heros-cards {
+    @include container(width, margin);
+}
