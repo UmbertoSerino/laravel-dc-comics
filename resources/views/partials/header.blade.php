@@ -5,16 +5,23 @@
         </div>
         <nav>
             <ul>
-                @for ($i = 0; $i < count($navBar); $i++) 
+                {{-- @for ($i = 0; $i < count($navBar); $i++) 
                     <li class="fs-5">{{ $navBar[$i] }}</li>
-                @endfor
+                @endfor --}}
+                <li>
+                    <a href="{{ route('pages.home') }}">
+                    Home
+                </a>
+                </li>
+                <li>
+                    <a href="{{ route('comics.guest.index') }}">
+                        Comics
+                    </a>
+                </li>
+                <li>
+                    Movies
+                </li>
             </ul>
         </nav>
     </section>
-    <main class="main-container">
-        <section class="container-jumbotron">
-            <div class="current-text">
-                <p class="current">Current Series</p>
-            </div>
-        </section>
 </header>

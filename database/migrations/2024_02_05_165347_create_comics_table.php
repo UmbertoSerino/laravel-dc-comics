@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->string('title', 50);
-            $table->text('title', 50);
+            $table->text('description');
             $table->text('img', 50);
-            $table->float('price', 4, 2);
-            $table->string('series', 30);
+            $table->string('price');
+            $table->string('series', 50);
             $table->date('sale_date');
             $table->string('type', 20);
             $table->timestamps();

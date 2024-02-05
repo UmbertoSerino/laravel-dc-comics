@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+<html lang="it">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,14 +14,19 @@
 <body>
     @include('partials.header')
     <main class="main-container">
-
+        <section class="container-jumbotron">
+            <div class="current-text">
+                <p class="current">Current Series</p>
+            </div>
+        </section>
         @yield('main-content')
     </main>
+
+
+
     @include('partials.footer')
 
     @yield('script-content')
-
-
 </body>
 
 </html>

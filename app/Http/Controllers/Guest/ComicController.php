@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -12,14 +13,8 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $navBar = config('items-header.navbar');
-        $dcComicsList = config('items-footer.dcComicsList');
-        $shopList = config('shopList-footer.shopList');
-        $dcList = config('dcList-footer.dcList');
-        $sitesList = config('sitesList-footer.sitesList');
-        $heroCards = config('herocards.heroCards');
-        $comics = config('comics.comics');
-        return view('comics.index',  compact('navBar', 'dcComicsList', 'shopList', 'dcList', 'sitesList', 'heroCards', 'comics'));
+        $comics = Comic::all();
+        return view('comics.guest.index',  compact('comics'));
     }
 
     /**
@@ -27,8 +22,15 @@ class ComicController extends Controller
      */
     public function show(string $id)
     {
-        return ('show' . $id);
+        //     // per trovare un'unico elemento usiamo findOrFail se non lo trova riporta a Error 404
+        $comic = Comic::findOrFail($id);
+        return view('comics.guest.show', compact('comic'));
     }
+    // in alternativa possiamo eseguire la findOrFair in questo modo e dalle route bisogna togliere {id} e sostiturilo con {comic}
+    // public function show(Comic $comic)
+    // {
+    //     return view('comics.guest.show', compact('comic'));
+    // }
 
     /**
      * Show the form for creating a new resource.
