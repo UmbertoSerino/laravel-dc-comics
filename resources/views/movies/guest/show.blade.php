@@ -13,7 +13,7 @@
                       <p class="card-text">Descrizione: {{ $movie['description'] }}</p>
                       <p class="card-text">Anno di uscita: {{ $movie['year'] }}</p>
                       <p class="card-text">Durata: {{ $movie["time"] }}</p>
-                      <p class="card-text">Prezzo: {{ $movie['price'] }}</p>
+                      <p class="card-text">Prezzo: {{ $movie['price'] }} $</p>
                       <a href="{{ route('movies.guest.index') }}" class="btn btn-primary">Torna indietro</a>
                   </div>
                 </div>

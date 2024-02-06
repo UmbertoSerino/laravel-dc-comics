@@ -15,7 +15,7 @@
                   <p class="card-text">
                     Prezzo: {{ $movie['price'] }} $
                   </p>
-                  <a href="{{ route('comics.guest.show', $movie['id']) }}" class="btn btn-primary">Visualizza di più</a>
+                  <a href="{{ route('movies.guest.show', $movie['id']) }}" class="btn btn-primary">Visualizza di più</a>
                 </div>
             </div>
         </div>
