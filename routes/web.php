@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\MovieController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Guest\ComicController as GuestComicController;
-use App\Http\Controllers\HomeController as GuestHomeController;
+use App\Http\Controllers\Admin\MovieController as AdminMovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,8 @@ Route::get('/comics', [GuestComicController::class, 'index'])->name('comics.gues
 Route::get('/comics/create', [GuestComicController::class, 'create'])->name('comics.guest.create');
 Route::post('/comics', [GuestComicController::class, 'store'])->name('comics.guest.store');
 Route::get('/comics/{id}', [GuestComicController::class, 'show'])->name('comics.guest.show');
+
+Route::get('/movies', [AdminMovieController::class, 'index'])->name('movies.guest.index');
+Route::get('/movies/create', [AdminMovieController::class, 'create'])->name('movies.guest.create');
+Route::post('/movies', [AdminMovieController::class, 'store'])->name('movies.guest.store');
+Route::get('/movies/{id}', [AdminMovieController::class, 'show'])->name('movies.guest.show');
