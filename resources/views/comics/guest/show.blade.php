@@ -2,7 +2,7 @@
 @section('main-content')
 
 <section class="container-heros-cards">
-    <article class="container-card">
+    <article class="container-card p-3">
         <div class="row">
             <div class="col-12">
                 <div class="card m-auto" style="width: 18rem;">
@@ -14,6 +14,7 @@
                       <p class="card-text">Serie: {{ $comic['series'] }}</p>
                       <p class="card-text">Data uscita: {{ $comic["sale_date"] }}</p>
                       <p class="card-text">Prezzo: {{ $comic['price'] }}</p>
+                      <a href="{{ route('comics.guest.index') }}" class="btn btn-primary">Torna indietro</a>
                   </div>
                 </div>
             </div>
