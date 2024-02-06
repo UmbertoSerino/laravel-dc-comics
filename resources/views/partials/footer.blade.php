@@ -5,15 +5,21 @@
                 <div>
                     <ul class="me-5">
                         <h1>dc comics</h1>
-                        {{-- @for ($i = 0; $i < count($dcComicsList); $i++) <li class="fs-5">{{ $dcComicsList[$i] }}</li>
-                            @endfor --}}
+                        <li>Characters</li>
+                        <li>Comics</li>
+                        <li>Moveies</li>
+                        <li>Tv</li>
+                        <li>Games</li>
+                        <li>Videos</li>
+                        <li>News</li>
                     </ul>
                     <ul class="me-5">
                         <h1>
                             Shop
                         </h1>
-                        {{-- @for ($i = 0; $i < count($shopList); $i++) <li class="fs-5">{{ $shopList[$i] }}</li>
-                            @endfor --}}
+                        <li>Shop DC</li>
+                        <li>Shop DC Cpòòactibles</li>
+
                     </ul>
                 </div>
                 <div>
@@ -21,15 +27,30 @@
                         <h1>
                             dc
                         </h1>
-                        {{-- @for ($i = 0; $i < count($dcList); $i++) <li class="fs-5">{{ $dcList[$i] }}</li>
-                            @endfor --}}
+                        <li>Terms Of USE</li>
+                        <li>Privacy policy (New)</li>
+                        <li>Ad Choices</li>
+                        <li>Advertising</li>
+                        <li>Jobs</li>
+                        <li>Sibsciptions</li>
+                        <li>Talent Workshops</li>
+                        <li>CPSC Certificates</li>
+                        <li>Ratings</li>
+                        <li>Shop Help</li>
+                        <li>Contact US</li>
                     </ul>
                 </div>
                 <div>
-
-
+                    <ul class="me-5">
+                        <h1>
+                            Sites
+                        </h1>
+                        <li>DC</li>
+                        <li>MAD Magazine</li>
+                        <li>DC Kids</li>
+                        <li>DC Universe</li>
+                        <li>DC Power Visa</li>
                     </ul>
-
                 </div>
             </div>
             <div>
