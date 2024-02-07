@@ -4,17 +4,19 @@
             <img src="{{ Vite::asset('resources/assets/img/dc-logo.png') }}" alt="DC main logo">
         </div>
         <ul>
+                    {{-- ----------COMIC---------- --}}
+
             <li>
                 <a href="{{ route('pages.home') }}">Home</a>
             </li>
             <li>
-                <a href="{{ route('comics.guest.index') }}">
-                Comics
-                </a>
+                <a href="{{ route('comics.guest.index') }}">Comics</a>
             </li>
             <li>
                 <a href="{{ route('comics.guest.create') }}">Add Comics</a>
             </li>
+
+                        {{-- ----------MOVIES---------- --}}
             <li>
                 <a href="{{ route('movies.guest.index') }}">Movies</a>
             </li>
