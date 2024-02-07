@@ -15,17 +15,7 @@ class MovieSeeder extends Seeder
     public function run(): void
     {
 
-        $movies = [
-            [
-                'title' => 'The Dark Knight',
-                'img' => 'https://m.media-amazon.com/images/S/pv-target-images/57618417a0ddf3b7aa29db658bef2fc3b9608bb11a021631d3b6408441c1e0f7.jpg',
-                'description' => 'The plot follows the vigilante Batman, police lieutenant James Gordon, and district attorney Harvey Dent, who form an alliance to dismantle organized crime in Gotham City.',
-                'director' => 'Christopher Nolan',
-                'year' => '2008/07/23',
-                'time' => '158 min',
-                'price' => 10.99,
-            ]
-        ];
+        $movies = config('movies');
 
         foreach ($movies as $movie) {
             $newMovie = new Movie();
