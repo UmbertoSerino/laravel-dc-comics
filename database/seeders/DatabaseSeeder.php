@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             ComicSeeder::class,
+            MovieSeeder::class,
         ]);
     }
 }
