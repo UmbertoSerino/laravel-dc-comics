@@ -22,7 +22,7 @@ class ComicController extends Controller
      */
     public function show(string $id)
     {
-
+        // Dependency injection al posto di string id, inseriamo Comic $comic e possiamo evitare il findOrFail
         $comic = Comic::findOrFail($id);
         return view('comics.guest.show', compact('comic'));
     }
@@ -41,15 +41,7 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $formComicsData = $request->all();
-        $newComic = new Comic();
-        $newComic->title = $formComicsData['title'];
-        $newComic->description = $formComicsData['description'];
-        $newComic->img = $formComicsData['thumb'];
-        $newComic->price = $formComicsData['price'];
-        $newComic->series = $formComicsData['series'];
-        $newComic->sale_date = $formComicsData['sale_date'];
-        $newComic->type = $formComicsData['type'];
-        $newComic->save();
+        $newComic = Comic::create($formComicsData);
 
         return redirect()->route('comics.guest.show', $newComic->id);
     }
@@ -66,8 +58,22 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Comic $comic)
+    // Dependency injection se come parametro, al posto dell'id aggiungiamo Comic $comic non c'e' bisogno della findOrFail
+    public function update(Request $request, string $id)
     {
+        $data = $request->all();
+
+        $comic = Comic::findOrFail($id);
+        $comic->title = $data['title'];
+        $comic->description = $data['description'];
+        $comic->img = $data['img'];
+        $comic->price = $data['price'];
+        $comic->series = $data['series'];
+        $comic->sale_date = $data['sale_date'];
+        $comic->type = $data['type'];
+        $comic->save();
+
+        return redirect()->route('comics.guest.show', $comic->id);
     }
 
     /**
