@@ -22,15 +22,10 @@ class ComicController extends Controller
      */
     public function show(string $id)
     {
-        //     // per trovare un'unico elemento usiamo findOrFail se non lo trova riporta a Error 404
+
         $comic = Comic::findOrFail($id);
         return view('comics.guest.show', compact('comic'));
     }
-    // in alternativa possiamo eseguire la findOrFair in questo modo e dalle route bisogna togliere {id} e sostiturilo con {comic}
-    // public function show(Comic $comic)
-    // {
-    //     return view('comics.guest.show', compact('comic'));
-    // }
 
     /**
      * Show the form for creating a new resource.
@@ -64,15 +59,15 @@ class ComicController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        return view('comics.guest.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
     }
 
     /**
