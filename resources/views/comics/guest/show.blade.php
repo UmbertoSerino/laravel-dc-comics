@@ -15,6 +15,8 @@
                       <p class="card-text">Data uscita: {{ $comic["sale_date"] }}</p>
                       <p class="card-text">Prezzo: {{ $comic['price'] }}</p>
                       <a href="{{ route('comics.guest.index') }}" class="btn btn-primary">Torna indietro</a>
+                      <a href="{{ route('comics.guest.edit',$comic->id) }}" class="btn btn-primary">Modifica</a>
+
                   </div>
                 </div>
             </div>
