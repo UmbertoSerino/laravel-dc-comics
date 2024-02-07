@@ -20,12 +20,16 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('pages.home');
 
-// diamo un nome in modo in modo da poter fare riferimento al name ovunque
+// ------------------ Route Comics
 Route::get('/comics', [GuestComicController::class, 'index'])->name('comics.guest.index');
 Route::get('/comics/create', [GuestComicController::class, 'create'])->name('comics.guest.create');
 Route::post('/comics', [GuestComicController::class, 'store'])->name('comics.guest.store');
 Route::get('/comics/{id}', [GuestComicController::class, 'show'])->name('comics.guest.show');
+Route::put('/comics/{id}', [GuestComicController::class, 'update'])->name('comics.guest.update');
+Route::get('/comics/{id}/edit', [GuestComicController::class, 'edit'])->name('comics.guest.edit');
 
+
+// ------------------ Route Movies
 Route::get('/movies', [AdminMovieController::class, 'index'])->name('movies.guest.index');
 Route::get('/movies/create', [AdminMovieController::class, 'create'])->name('movies.guest.create');
 Route::post('/movies', [AdminMovieController::class, 'store'])->name('movies.guest.store');
